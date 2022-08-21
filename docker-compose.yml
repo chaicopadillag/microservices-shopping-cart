@@ -1,0 +1,13 @@
+version: '3'
+name: 'shopping-cart'
+
+services:
+  mongodb:
+    image: mongo:5
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongodb:/data/db
+    restart: always
+    environment:
+      MONGO_DATABASE: shopping_cart

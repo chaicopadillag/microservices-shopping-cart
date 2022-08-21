@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/shopping-cart/src",
+  "monorepo": true,
+  "root": "apps/shopping-cart",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/shopping-cart/tsconfig.app.json"
+  },
+  "projects": {
+    "shopping-cart": {
+      "type": "application",
+      "root": "apps/shopping-cart",
+      "entryFile": "main",
+      "sourceRoot": "apps/shopping-cart/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/shopping-cart/tsconfig.app.json"
+      }
+    },
+    "user-app": {
+      "type": "application",
+      "root": "apps/user-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-app/tsconfig.app.json"
+      }
+    },
+    "purchase-order-app": {
+      "type": "application",
+      "root": "apps/purchase-order-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/purchase-order-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/purchase-order-app/tsconfig.app.json"
+      }
+    },
+    "product-app": {
+      "type": "application",
+      "root": "apps/product-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/product-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/product-app/tsconfig.app.json"
+      }
+    }
+  }
+}
